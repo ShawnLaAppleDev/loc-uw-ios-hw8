@@ -1,9 +1,9 @@
-# Homework 6 :: CP 125 iOS App Dev, Spring 2015 #
+# Homework 7 :: CP 125 iOS App Dev, Spring 2015 #
 
 The files for this homework are also available at the following
 repository on GitHub:
 
->  <https://github.com/carljparker/checkins-uw-ios-hw6>
+>  <https://github.com/carljparker/settings-uw-ios-hw7>
 
 This homework implements a simple checkin app that enables the user to
 search for nearby locations on a map view and select one, which is then
