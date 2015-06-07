@@ -9,12 +9,38 @@
 #import "GetImageViewController.h"
 #import "ImageInfo.h"
 
+//
+// This is a source type that we don't access photos from,
+// so use this a value that represents that we haven't set
+// the source type yet.
+//
+static UIImagePickerControllerSourceType unSetSourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 
-@interface GetImageViewController () 
+@interface GetImageViewController ()
+
+@property UIImagePickerControllerSourceType imageSourceType;
 
 @end
 
 @implementation GetImageViewController
+
+
+-(instancetype)init {
+    
+    self = [super init];
+    
+    if (self)
+    {
+        //
+        // Set this to a value that represents a source we don't use
+        //
+        self.imageSourceType = unSetSourceType;
+        
+    }
+    
+    return self;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -74,6 +100,15 @@
 }
 
 -(void) _presentImagePicker:(UIImagePickerControllerSourceType)sourceType {
+    
+    //
+    // Set the property that tracks the source type.
+    // We read this property once we have the image,
+    // in imagePicerController below, to know whether
+    // to save the image to the saved photos album.
+    //
+    self.imageSourceType = sourceType;
+    
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.sourceType = sourceType;
     imagePicker.mediaTypes = @[ (NSString *) kUTTypeImage ];
@@ -90,6 +125,13 @@
     
     self.displayPickedImageView.image = selectedImage;
     
+    if (self.imageSourceType == unSetSourceType) {
+        assert("imagePickerController: image source type should be set");
+    }
+    else if (self.imageSourceType == UIImagePickerControllerSourceTypeCamera) {
+        UIImageWriteToSavedPhotosAlbum(selectedImage, self, @selector(image:finishedSavingWithError:contextInfo:), nil);
+    }
+    
     ImageInfo *imageInfo = [[ImageInfo alloc] initWithImage:selectedImage];
     
     [self.getImageDelegate getImageViewController:self didGetImageInfo:imageInfo];
@@ -97,6 +139,24 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
     
+}
+
+//
+// Following code taken from techotopia at the following URL:
+//
+//   http://tinyurl.com/nuwtxnl
+//
+-(void)image:(UIImage *)image finishedSavingWithError:(NSError *) error contextInfo:(void *)contextInfo
+{
+    if (error) {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle: @"Save failed"
+                              message: @"Failed to save image/video"
+                              delegate: nil
+                              cancelButtonTitle:@"OK"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
 }
 
 
