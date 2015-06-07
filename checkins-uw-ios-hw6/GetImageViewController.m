@@ -128,10 +128,10 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
     self.displayPickedImageView.image = selectedImage;
     
     //
-    // Synchronize user settings and create an object
-    // to access the AppDelegate.
+    // Create an object to access the AppDelegate.
     //
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    // I synchronize in the call to shouldSaveToPhotoAlbum
+    //
     AppDelegate *aD = [UIApplication sharedApplication].delegate;
     
     if (self.imageSourceType == unSetSourceType) {
