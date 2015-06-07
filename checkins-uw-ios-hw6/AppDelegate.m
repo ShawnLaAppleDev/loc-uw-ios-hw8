@@ -24,7 +24,7 @@ static NSString * const SaveCameraPhoto = @"SaveCameraPhoto";
     
     NSLog( @"Window: %@", self.window.rootViewController );
     
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ SaveCameraPhoto : @"1" }];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ SaveCameraPhoto : @"YES" }];
     
 //    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 //    
@@ -41,9 +41,9 @@ static NSString * const SaveCameraPhoto = @"SaveCameraPhoto";
 
 - (BOOL) shouldSaveToPhotoAlbum {
     
-    NSString * saveToPhotoAlbum = [[NSUserDefaults standardUserDefaults] stringForKey:SaveCameraPhoto];
+    BOOL saveToPhotoAlbum = [[NSUserDefaults standardUserDefaults] boolForKey:SaveCameraPhoto];
     
-    return YES;
+    return saveToPhotoAlbum;
     
 }
 
