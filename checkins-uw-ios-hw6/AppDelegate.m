@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 
 
-static NSString * const SaveCameraPhoto = @"SaveToPhotoAlbum";
+static NSString * const SaveCameraPhoto = @"SaveCameraPhoto";
 
 
 @interface AppDelegate ()
