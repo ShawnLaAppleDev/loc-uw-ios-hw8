@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 
+static NSString * const SaveCameraPhoto = @"SaveToPhotoAlbum";
+
 
 @interface AppDelegate ()
 
@@ -22,6 +24,8 @@
     
     NSLog( @"Window: %@", self.window.rootViewController );
     
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ SaveCameraPhoto : @"1" }];
+    
 //    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
 //    
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -30,6 +34,14 @@
 //    
 //    self.window.rootViewController = viewController;
 //    [self.window makeKeyAndVisible];
+    
+    return YES;
+    
+}
+
+- (BOOL) shouldSaveToPhotoAlbum {
+    
+    NSString * saveToPhotoAlbum = [[NSUserDefaults standardUserDefaults] stringForKey:SaveCameraPhoto];
     
     return YES;
     

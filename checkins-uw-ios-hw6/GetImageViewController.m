@@ -6,6 +6,7 @@
 //
 //
 
+#import "AppDelegate.h"
 #import "GetImageViewController.h"
 #import "ImageInfo.h"
 
@@ -115,20 +116,28 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
     imagePicker.delegate = self;
     
     [self presentViewController:imagePicker animated:YES completion:nil];
+    
 }
 
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
 
     NSLog( @"@%s", __PRETTY_FUNCTION__ );
-    UIImage *selectedImage = info[UIImagePickerControllerOriginalImage];
     
+    UIImage *selectedImage = info[UIImagePickerControllerOriginalImage];
     self.displayPickedImageView.image = selectedImage;
+    
+    //
+    // Synchronize user settings and create an object
+    // to access the AppDelegate.
+    //
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    AppDelegate *aD = [UIApplication sharedApplication].delegate;
     
     if (self.imageSourceType == unSetSourceType) {
         assert("imagePickerController: image source type should be set");
     }
-    else if (self.imageSourceType == UIImagePickerControllerSourceTypeCamera) {
+    else if ( (self.imageSourceType == UIImagePickerControllerSourceTypeCamera ) && [aD shouldSaveToPhotoAlbum] ) {
         UIImageWriteToSavedPhotosAlbum(selectedImage, self, @selector(image:finishedSavingWithError:contextInfo:), nil);
     }
     
