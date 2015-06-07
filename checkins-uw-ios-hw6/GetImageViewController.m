@@ -14,7 +14,7 @@
 // so use this a value that represents that we haven't set
 // the source type yet.
 //
-static UIImagePickerControllerSourceType unSetSourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
 
 @interface GetImageViewController ()
 
