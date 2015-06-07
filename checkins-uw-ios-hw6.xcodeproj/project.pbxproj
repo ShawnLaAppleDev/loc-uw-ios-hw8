@@ -12,6 +12,7 @@
 		871EDFBA1B1BDBA400AA36F9 /* CheckinInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */; };
 		871EDFBD1B1BDBC200AA36F9 /* CheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */; };
 		872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872597DD1B18B34E00CA5C48 /* MapViewController.m */; };
+		8760D8DF1B24FAC200F8AAF9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */; };
 		879F51781B1F578F0053C429 /* GetImageNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F51771B1F578F0053C429 /* GetImageNavController.m */; };
 		87B9E9311B12484A00971FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9301B12484A00971FB0 /* main.m */; };
 		87B9E9341B12484A00971FB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9331B12484A00971FB0 /* AppDelegate.m */; };
@@ -48,6 +49,7 @@
 		871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinTableViewCell.m; sourceTree = "<group>"; };
 		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		879F51761B1F578F0053C429 /* GetImageNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageNavController.h; sourceTree = "<group>"; };
 		879F51771B1F578F0053C429 /* GetImageNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageNavController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +152,7 @@
 			children = (
 				87B9E9321B12484A00971FB0 /* AppDelegate.h */,
 				87B9E9331B12484A00971FB0 /* AppDelegate.m */,
+				8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */,
 				871EDFBE1B1BDBCD00AA36F9 /* Checkin */,
 				871EDFBF1B1BDBF300AA36F9 /* Images */,
 				87B9E9351B12484A00971FB0 /* ViewController.h */,
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8760D8DF1B24FAC200F8AAF9 /* Settings.bundle in Resources */,
 				87B9E93A1B12484A00971FB0 /* Main.storyboard in Resources */,
 				87B9E93F1B12484A00971FB0 /* LaunchScreen.xib in Resources */,
 				87B9E93C1B12484A00971FB0 /* Images.xcassets in Resources */,
