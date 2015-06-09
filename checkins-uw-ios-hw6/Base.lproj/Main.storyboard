@@ -100,11 +100,23 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSD-p4-MSG" id="dmi-ug-lto">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-VR-aR0">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-VR-aR0">
                                             <rect key="frame" x="22" y="12" width="104" height="116"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="104" id="ikA-A8-4RQ"/>
+                                                <constraint firstAttribute="width" constant="104" id="nue-Uc-2qp"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="nue-Uc-2qp"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="ikA-A8-4RQ"/>
+                                                    <include reference="nue-Uc-2qp"/>
+                                                </mask>
+                                            </variation>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNP-Oe-t2X">
                                             <rect key="frame" x="459" y="55" width="50" height="29"/>
@@ -115,13 +127,31 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerY" secondItem="DNP-Oe-t2X" secondAttribute="centerY" id="5ot-e2-Zjh"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mpN-VR-aR0" secondAttribute="bottom" constant="3" id="Bwh-BM-C0j"/>
+                                        <constraint firstItem="mpN-VR-aR0" firstAttribute="leading" secondItem="dmi-ug-lto" secondAttribute="leadingMargin" constant="7" id="WLJ-qR-3S7"/>
                                         <constraint firstItem="mpN-VR-aR0" firstAttribute="leading" secondItem="dmi-ug-lto" secondAttribute="leadingMargin" constant="14" id="Zs0-tu-ccZ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="DNP-Oe-t2X" secondAttribute="trailing" constant="83" id="hsC-Pg-mbG">
                                             <variation key="heightClass=regular-widthClass=compact" constant="62"/>
                                         </constraint>
+                                        <constraint firstItem="mpN-VR-aR0" firstAttribute="top" secondItem="dmi-ug-lto" secondAttribute="topMargin" constant="4" id="jFI-Pi-lq8"/>
                                         <constraint firstItem="mpN-VR-aR0" firstAttribute="top" secondItem="dmi-ug-lto" secondAttribute="topMargin" constant="4" id="s3o-Ef-9CJ"/>
-                                        <constraint firstAttribute="centerY" secondItem="mpN-VR-aR0" secondAttribute="centerY" constant="-0.5" id="wDP-bm-lTX"/>
                                     </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Bwh-BM-C0j"/>
+                                            <exclude reference="WLJ-qR-3S7"/>
+                                            <exclude reference="jFI-Pi-lq8"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="Bwh-BM-C0j"/>
+                                            <include reference="WLJ-qR-3S7"/>
+                                            <exclude reference="Zs0-tu-ccZ"/>
+                                            <include reference="jFI-Pi-lq8"/>
+                                            <exclude reference="s3o-Ef-9CJ"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tableDate" destination="DNP-Oe-t2X" id="Xdo-NI-wrt"/>
