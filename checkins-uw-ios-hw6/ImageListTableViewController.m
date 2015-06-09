@@ -117,20 +117,6 @@ static NSString * customImageCellID = @"customImageCell";
 - (IBAction)getImage:(id)sender
 {
     NSLog(@"%@", @"Custom Button Clicked");
-    
-
-//
-//  You cannot push a Nav controller.
-//
-//  If I push the View Controller, I get an all black VC with a toolbar with a "back" button.
-//
-//  If I do the following, and present the Nav controller, I get an all-black VC with an empty toolbar at the top, no back button
-//
-//    GetImageNavController *getImageNavController = [[GetImageNavController alloc] initWithRootViewController:getImageViewController];
-    
-//
-//  The following gives me just an all-black VC.
-//
 
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     

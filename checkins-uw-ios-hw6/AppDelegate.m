@@ -25,16 +25,7 @@ static NSString * const SaveCameraPhoto = @"SaveCameraPhoto";
     NSLog( @"Window: %@", self.window.rootViewController );
     
     [[NSUserDefaults standardUserDefaults] registerDefaults:@{ SaveCameraPhoto : @"NO" }];
-    
-//    self.window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-//    
-//    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//    
-//    UIViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"MapKitNavigationController"];
-//    
-//    self.window.rootViewController = viewController;
-//    [self.window makeKeyAndVisible];
-    
+       
     return YES;
     
 }
