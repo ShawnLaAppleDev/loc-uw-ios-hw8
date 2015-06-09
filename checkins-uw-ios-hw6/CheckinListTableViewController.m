@@ -107,8 +107,17 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    [super prepareForSegue:segue sender:sender];
+     [super prepareForSegue:segue sender:sender];
     
+     //
+     // Note that this code doesn't instantiate either the nav or the view controller.
+     // By the time that this method, prepareForSegue, is called these destination nav
+     // controller and its top view controller already exist. We are just getting
+     // references to them here.
+     //
+     // It is interesting to note also that they use the term "top view controller" here
+     // rather than "root view controller"
+     //
     UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
     
     MapViewController *mapViewController = (MapViewController *)navigationController.topViewController;
