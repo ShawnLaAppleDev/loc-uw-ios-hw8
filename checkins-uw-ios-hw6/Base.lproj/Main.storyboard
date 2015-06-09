@@ -124,8 +124,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="tableDate" destination="DNP-Oe-t2X" id="Q5U-Ur-GkU"/>
-                                    <outlet property="tableImage" destination="mpN-VR-aR0" id="mBn-nG-KaU"/>
+                                    <outlet property="tableDate" destination="DNP-Oe-t2X" id="Xdo-NI-wrt"/>
+                                    <outlet property="tableImage" destination="mpN-VR-aR0" id="LLz-pu-Cax"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" rowHeight="100" id="1Do-Kc-TYv">
