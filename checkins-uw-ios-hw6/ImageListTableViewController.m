@@ -98,7 +98,7 @@ static NSString * customImageCellID = @"customImageCell";
     
     ImageInfo *imageInfo = (ImageInfo *)self.imageInfoList[indexPath.row];
     
-    cell.imageView.image = imageInfo.image;
+    cell.tableImage.image = imageInfo.image;
 
     //
     // Convert the date taken into a form we can display in the table
