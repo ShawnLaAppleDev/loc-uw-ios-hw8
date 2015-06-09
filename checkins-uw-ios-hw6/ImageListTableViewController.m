@@ -59,7 +59,7 @@ static NSString * customImageCellID = @"customImageCell";
     // Following Shawn's guidance here.
     // For some reason, need to register the custom cell explicitly.
     //
-    [self.tableView registerClass:[ImageTableViewCell class] forCellReuseIdentifier:customImageCellID];
+//    [self.tableView registerClass:[ImageTableViewCell class] forCellReuseIdentifier:customImageCellID];
     
     self.tableView.rowHeight = 140;
     

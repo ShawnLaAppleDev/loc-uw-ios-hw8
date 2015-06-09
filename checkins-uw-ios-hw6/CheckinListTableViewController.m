@@ -82,7 +82,13 @@ static NSString *checkinCustomTableCellID = @"checkinCustomCell";
     
     CheckinInfo * checkinInfo = (CheckinInfo *)self.checkinInfoList[indexPath.row];
     
-    ImageListTableViewController * imageListTableViewController = [[ImageListTableViewController alloc] initWithImageList:checkinInfo.imageInfoList];
+    UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    ImageListTableViewController * imageListTableViewController = [sb instantiateViewControllerWithIdentifier:@"MyImageGallery"];
+    
+    imageListTableViewController.imageInfoList = checkinInfo.imageInfoList;
+
+//    ImageListTableViewController * imageListTableViewController = [[ImageListTableViewController alloc] initWithImageList:checkinInfo.imageInfoList];
     
     [[self navigationController] pushViewController:imageListTableViewController animated:YES];
     
