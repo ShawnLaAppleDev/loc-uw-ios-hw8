@@ -50,6 +50,9 @@
 		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		877C4AAC1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		877C4AAD1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		877C4AAF1B28881D00093248 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		879F51761B1F578F0053C429 /* GetImageNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageNavController.h; sourceTree = "<group>"; };
 		879F51771B1F578F0053C429 /* GetImageNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageNavController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -342,6 +345,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				87B9E9391B12484A00971FB0 /* Base */,
+				877C4AAC1B2887F500093248 /* de */,
+				877C4AAF1B28881D00093248 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -350,6 +355,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				87B9E93E1B12484A00971FB0 /* Base */,
+				877C4AAD1B2887F500093248 /* de */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

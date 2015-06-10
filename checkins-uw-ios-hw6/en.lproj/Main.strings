@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Date"; ObjectID = "GyS-Mf-5QY"; */
+"GyS-Mf-5QY.text" = "Date";
+
+/* Class = "UINavigationItem"; title = "My Image Gallery"; ObjectID = "Wao-Ga-117"; */
+"Wao-Ga-117.title" = "My Image Gallery";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "Z0Q-Vr-CM2"; */
+"Z0Q-Vr-CM2.text" = "Location";
+
+/* Class = "UINavigationItem"; title = "Capture Image"; ObjectID = "ZPy-8c-hMY"; */
+"ZPy-8c-hMY.title" = "Capture Image";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "taK-Qk-yUt"; */
+"taK-Qk-yUt.title" = "Root View Controller";
