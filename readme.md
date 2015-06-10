@@ -6,13 +6,15 @@ repository on GitHub:
 >  <https://github.com/carljparker/settings-uw-ios-hw7>
 
 This homework builds on the checkin application by adding a saved
-setting using an app bundle, so that the setting can be updated using
-the Settings app on the device.
+setting that is implemented with an app bundle, so that the setting can
+be updated using the Settings app on the device.
 
 The setting stores a boolean value which determines whether the checkin
 application saves a checkin image taken with the device's camera to the
 devices photo album. If YES, the image is saved. The default value, in
 the absence of the user changing the settings, is NO.
+
+## Implementation Notes ##
 
 I should save the image only if the image is taken with the camera, not
 if the image is just picked from the photo album. However, the method
@@ -25,19 +27,21 @@ added a private property to the GetImageViewController class,
 `imageSourceType`, which makes the source type available.
 
 The other condition that must hold in order to save the image is that
-the `SaveCameraPhoto` should be YES. I added the method 
+the `SaveCameraPhoto` setting should be YES. I added the method 
 
     - (BOOL) shouldSaveToPhotoAlbum
 
 which synchronizes the app with the settings that are in the bundle and
 returns the value of `SaveCameraPhoto`.
 
-This homework implements a simple checkin app that enables the user to
-search for nearby locations on a map view and select one, which is then
-stored in a list. The list is displayed in a table view. By tapping a
-row in this table view, the user can add images using the photo library
-or the device's camera. These images are associated with the checkin
-location for the row that the user tapped.
+## Fixes ##
+
+Between HW6 and this HW, I fixed an issue that caused the table view to
+display _very small_ renderings of the photos saved for a particular
+location. The photos are now rendered in a reasonable size. This fixed
+also results in the table view displaying the date on which the photo
+was added.
+
 
 ## Known Issues ##
 
@@ -55,16 +59,10 @@ much better to derive a place name and store that in the checkin list.
 - The app enables the user to save multiple instances of the same
 location.
 
-In addition to the above, I'm pretty sure that the app contains some
-extraneous code that is not called, but which was introduced when I
-experimented with ways to get the view transitions to work. And since
-that code is commented, there are also extraneous comments that should
-be removed.
-
-I have ideas about how to fix all of these things and since this code
-will be the foundation for the next two HW assignments, I might end up
-fixing some of them. But for this assignment, it is time to call it good
-and move on.
+I have ideas about how to fix these things and since this code will be
+the foundation for the next two HW assignments, I might end up fixing
+some of them. But for this assignment, it is time to call it good and
+move on.
 
 
 *** END ***
