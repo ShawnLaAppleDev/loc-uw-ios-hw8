@@ -111,7 +111,7 @@ static NSString * customImageCellID = @"customImageCell";
     //
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+//    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     cell.tableDate.text  = [dateFormatter stringFromDate:imageInfo.dateTaken];
