@@ -53,6 +53,7 @@
 		877C4AAC1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		877C4AAD1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		877C4AAF1B28881D00093248 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		877C4AB11B288A2400093248 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		879F51761B1F578F0053C429 /* GetImageNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetImageNavController.h; sourceTree = "<group>"; };
 		879F51771B1F578F0053C429 /* GetImageNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetImageNavController.m; sourceTree = "<group>"; };
 		87B9E92B1B12484A00971FB0 /* checkins-uw-ios-hw6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "checkins-uw-ios-hw6.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -356,6 +357,7 @@
 			children = (
 				87B9E93E1B12484A00971FB0 /* Base */,
 				877C4AAD1B2887F500093248 /* de */,
+				877C4AB11B288A2400093248 /* en */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
