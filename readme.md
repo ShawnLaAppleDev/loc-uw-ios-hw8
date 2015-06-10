@@ -11,8 +11,8 @@ be updated using the Settings app on the device.
 
 The setting stores a boolean value which determines whether the checkin
 application saves a checkin image taken with the device's camera to the
-devices photo album. If YES, the image is saved. The default value, in
-the absence of the user changing the settings, is NO.
+device's photo album. If YES, the image is saved. The default value, in
+the absence of the user changing the setting, is NO.
 
 ## Implementation Notes ##
 
@@ -23,7 +23,7 @@ that would save the image
     -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 
 doesn't receive the source as one of its parameters. Therefore, I have
-added a private property to the GetImageViewController class,
+added a private property to the **GetImageViewController** class,
 `imageSourceType`, which makes the source type available.
 
 The other condition that must hold in order to save the image is that
@@ -49,7 +49,7 @@ popover controller.
 
 Between HW6 and this HW, I fixed an issue that caused the table view to
 display _very small_ renderings of the photos saved for a particular
-location. The photos are now rendered in a reasonable size. This fixed
+location. The photos are now rendered in a reasonable size. This fix
 also results in the table view displaying the date on which the photo
 was added.
 
