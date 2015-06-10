@@ -34,6 +34,17 @@ the `SaveCameraPhoto` setting should be YES. I added the method
 which synchronizes the app with the settings that are in the bundle and
 returns the value of `SaveCameraPhoto`.
 
+
+## Supported Devices ##
+
+I've tested the app on the simulator with an iPhone 5s configuration and
+on my own iPhone 5s. 
+
+I also tested on the simulator with an iPad Retina configuration, but
+this resulted in a crash with a message that I needed to present using a
+popover controller.
+
+
 ## Fixes ##
 
 Between HW6 and this HW, I fixed an issue that caused the table view to
@@ -44,6 +55,17 @@ was added.
 
 
 ## Known Issues ##
+
+
+### New Issues ###
+
+The app crashed reproducibly when I tried to run it on the simulator
+with an iPad Retina configuration. Based on the error message, this
+device seems to require the use of a popover controller. I did not
+investigate this issue any further.
+
+
+### Issues from Previous Releases ###
 
 The app continues to have the following issues which were in the
 original checkin app and have carried over to this version.
