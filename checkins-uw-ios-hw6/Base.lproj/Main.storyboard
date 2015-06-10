@@ -100,16 +100,65 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2eN-fa-8Zu" id="kqi-hq-Wa6">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-Yu-77p">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XGG-Yu-77p">
                                             <rect key="frame" x="21" y="0.0" width="161" height="139"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="161" id="ZUR-6I-t2K"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-Mf-5QY">
-                                            <rect key="frame" x="367" y="59" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GyS-Mf-5QY">
+                                            <rect key="frame" x="402" y="59" width="109" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="109" id="vWR-Ab-eWv"/>
+                                                <constraint firstAttribute="width" constant="109" id="y52-ON-nUJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="y52-ON-nUJ"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="vWR-Ab-eWv"/>
+                                                    <include reference="y52-ON-nUJ"/>
+                                                </mask>
+                                            </variation>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="XGG-Yu-77p" firstAttribute="top" secondItem="kqi-hq-Wa6" secondAttribute="top" id="4d0-3V-WUf"/>
+                                        <constraint firstAttribute="centerY" secondItem="XGG-Yu-77p" secondAttribute="centerY" id="Ccp-7L-1yV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GyS-Mf-5QY" secondAttribute="trailing" constant="81" id="Jsi-TQ-C02"/>
+                                        <constraint firstItem="XGG-Yu-77p" firstAttribute="leading" secondItem="kqi-hq-Wa6" secondAttribute="leadingMargin" constant="13" id="Otl-1f-Odg"/>
+                                        <constraint firstItem="GyS-Mf-5QY" firstAttribute="top" secondItem="kqi-hq-Wa6" secondAttribute="topMargin" constant="51" id="aXB-Xr-9dV"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GyS-Mf-5QY" secondAttribute="trailing" constant="-7" id="fQ4-Ap-d6W">
+                                            <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                                        </constraint>
+                                        <constraint firstItem="GyS-Mf-5QY" firstAttribute="centerY" secondItem="XGG-Yu-77p" secondAttribute="centerY" id="jg3-tM-k8M"/>
+                                        <constraint firstItem="GyS-Mf-5QY" firstAttribute="top" secondItem="kqi-hq-Wa6" secondAttribute="topMargin" constant="51" id="jpz-xF-3QZ"/>
+                                        <constraint firstItem="XGG-Yu-77p" firstAttribute="leading" secondItem="kqi-hq-Wa6" secondAttribute="leadingMargin" constant="13" id="kLE-j7-bNv"/>
+                                        <constraint firstItem="GyS-Mf-5QY" firstAttribute="centerY" secondItem="XGG-Yu-77p" secondAttribute="centerY" id="w9d-Vb-eQz"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="aXB-Xr-9dV"/>
+                                            <exclude reference="fQ4-Ap-d6W"/>
+                                            <exclude reference="w9d-Vb-eQz"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="constraints">
+                                            <exclude reference="Jsi-TQ-C02"/>
+                                            <include reference="aXB-Xr-9dV"/>
+                                            <include reference="fQ4-Ap-d6W"/>
+                                            <exclude reference="jg3-tM-k8M"/>
+                                            <exclude reference="jpz-xF-3QZ"/>
+                                            <include reference="w9d-Vb-eQz"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="tableDate" destination="GyS-Mf-5QY" id="S04-dl-ODM"/>
