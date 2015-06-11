@@ -62,12 +62,12 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
     
     BOOL isPhotoLibraryAvailable = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary];
     
-    UIAlertController *ac = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"image-source", @"Image Source");
-                                                               message:NSLocalizedString(@"select-the-source-from-which-to-capture-the-image.", @"Select the Source from Which to Capture the Image.");
+    UIAlertController *ac = [UIAlertController alertControllerWithTitle:NSLocalizedString(@"image-source", @"Image Source")
+                                                               message:NSLocalizedString(@"select-the-source-from-which-to-capture-the-image.", @"Select the Source from Which to Capture the Image.")
                                                          preferredStyle:UIAlertControllerStyleActionSheet];
     
     if (isCameraAvailable) {
-        [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"camera", @"Camera");
+        [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"camera", @"Camera")
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
                                                  NSLog(@"Image Src: Camera");
@@ -77,7 +77,7 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
     }
     
     if (isPhotoLibraryAvailable) {
-        [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"photo-library", @"Photo Library");
+        [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"photo-library", @"Photo Library")
                                                style:UIAlertActionStyleDefault
                                              handler:^(UIAlertAction *action) {
                                                  NSLog(@"Image Src: Photo Lib");
@@ -88,7 +88,7 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
         
     }
     
-    [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"cancel", @"Cancel");
+    [ac addAction:[UIAlertAction actionWithTitle:NSLocalizedString( @"cancel", @"Cancel")
                                            style:UIAlertActionStyleCancel
                                          handler:nil]];
     //
@@ -159,10 +159,10 @@ static UIImagePickerControllerSourceType const unSetSourceType = UIImagePickerCo
 {
     if (error) {
         UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle: NSLocalizedString(@"save-failed", @"Save failed");
-                              message: NSLocalizedString(@"failed-to-save-image-video", @"Failed to save image/video");
+                              initWithTitle: NSLocalizedString(@"save-failed", @"Save failed")
+                              message: NSLocalizedString(@"failed-to-save-image-video", @"Failed to save image/video")
                               delegate: nil
-                              cancelButtonTitle:NSLocalizedString(@"ok", @"OK");
+                              cancelButtonTitle:NSLocalizedString(@"ok", @"OK")
                               otherButtonTitles:nil];
         [alert show];
     }
