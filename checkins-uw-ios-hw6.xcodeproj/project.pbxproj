@@ -12,6 +12,7 @@
 		871EDFBA1B1BDBA400AA36F9 /* CheckinInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFB91B1BDBA400AA36F9 /* CheckinInfo.m */; };
 		871EDFBD1B1BDBC200AA36F9 /* CheckinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */; };
 		872597DE1B18B34E00CA5C48 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 872597DD1B18B34E00CA5C48 /* MapViewController.m */; };
+		87573BE91B2948FA00C95145 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 87573BEB1B2948FA00C95145 /* Localizable.strings */; };
 		8760D8DF1B24FAC200F8AAF9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */; };
 		879F51781B1F578F0053C429 /* GetImageNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879F51771B1F578F0053C429 /* GetImageNavController.m */; };
 		87B9E9311B12484A00971FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B9E9301B12484A00971FB0 /* main.m */; };
@@ -49,6 +50,9 @@
 		871EDFBC1B1BDBC200AA36F9 /* CheckinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckinTableViewCell.m; sourceTree = "<group>"; };
 		872597DC1B18B34E00CA5C48 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		872597DD1B18B34E00CA5C48 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		87573BEA1B2948FA00C95145 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87573BEC1B2948FD00C95145 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		87573BED1B29490000C95145 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8760D8DE1B24FAC200F8AAF9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		877C4AAC1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
 		877C4AAD1B2887F500093248 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		87B9E9221B12484A00971FB0 = {
 			isa = PBXGroup;
 			children = (
+				87573BEB1B2948FA00C95145 /* Localizable.strings */,
 				87B9E9681B13CB4400971FB0 /* Frameworks */,
 				87B9E92D1B12484A00971FB0 /* checkins-uw-ios-hw6 */,
 				87B9E9471B12484A00971FB0 /* checkins-uw-ios-hw6Tests */,
@@ -270,6 +275,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 87B9E9221B12484A00971FB0;
 			productRefGroup = 87B9E92C1B12484A00971FB0 /* Products */;
@@ -287,6 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87573BE91B2948FA00C95145 /* Localizable.strings in Resources */,
 				8760D8DF1B24FAC200F8AAF9 /* Settings.bundle in Resources */,
 				87B9E93A1B12484A00971FB0 /* Main.storyboard in Resources */,
 				87B9E93F1B12484A00971FB0 /* LaunchScreen.xib in Resources */,
@@ -342,6 +349,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		87573BEB1B2948FA00C95145 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87573BEA1B2948FA00C95145 /* Base */,
+				87573BEC1B2948FD00C95145 /* en */,
+				87573BED1B29490000C95145 /* de */,
+			);
+			name = Localizable.strings;
+			path = "checkins-uw-ios-hw6";
+			sourceTree = "<group>";
+		};
 		87B9E9381B12484A00971FB0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
