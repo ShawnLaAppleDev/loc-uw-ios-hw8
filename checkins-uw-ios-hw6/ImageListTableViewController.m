@@ -49,7 +49,7 @@ static NSString * customImageCellID = @"customImageCell";
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     
-    self.navigationItem.title = NSLocalizedString(@"Checkin Gallery", @"Checkin Gallery");
+    self.navigationItem.title = NSLocalizedString(@"checkin-gallery", @"Checkin Gallery");
     
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getImage:)];
     
