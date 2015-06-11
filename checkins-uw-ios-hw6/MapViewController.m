@@ -48,7 +48,7 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
     //
-    // The ...10, 10... here are the "zoom level"
+    // The ...10, 10... here is the "zoom level"
     //
     [mapView setRegion:MKCoordinateRegionMakeWithDistance(userLocation.location.coordinate, 10, 10) animated:YES];
     

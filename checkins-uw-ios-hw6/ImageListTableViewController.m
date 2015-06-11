@@ -49,7 +49,7 @@ static NSString * customImageCellID = @"customImageCell";
     NSLog(@"%s", __PRETTY_FUNCTION__);
     
     
-    self.navigationItem.title = @"Checkin Gallery";
+    self.navigationItem.title = NSLocalizedString(@"Checkin Gallery", @"Checkin Gallery");
     
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(getImage:)];
     
@@ -111,7 +111,7 @@ static NSString * customImageCellID = @"customImageCell";
     //
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     
-//    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
+//k    [dateFormatter setLocale:[[NSLocale alloc] initWithLocaleIdentifier:@"en_US"]];
     [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
     
     cell.tableDate.text  = [dateFormatter stringFromDate:imageInfo.dateTaken];
