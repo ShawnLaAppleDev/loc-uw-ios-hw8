@@ -1,38 +1,22 @@
-# Homework 7 :: CP 125 iOS App Dev, Spring 2015 #
+# Homework 8 :: CP 125 iOS App Dev, Spring 2015 #
 
 The files for this homework are also available at the following
 repository on GitHub:
 
->  <https://github.com/carljparker/settings-uw-ios-hw7>
+>  <https://github.com/carljparker/loc-uw-ios-hw8>
 
-This homework builds on the checkin application by adding a saved
-setting that is implemented with an app bundle, so that the setting can
-be updated using the Settings app on the device.
+**Note** This readme covers only this homework. But this homework
+incorporate code and functionality from several previous homeworks. For
+information about the implementation and issues associated with those
+homeworks, please see the readme files that accompanied them.
 
-The setting stores a boolean value which determines whether the checkin
-application saves a checkin image taken with the device's camera to the
-device's photo album. If YES, the image is saved. The default value, in
-the absence of the user changing the setting, is NO.
+
+This homework builds on the settings version of the checkin application
+by adding localization for the German language. 
+
 
 ## Implementation Notes ##
 
-I should save the image only if the image is taken with the camera, not
-if the image is just picked from the photo album. However, the method
-that would save the image 
-
-    -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
-
-doesn't receive the source as one of its parameters. Therefore, I have
-added a private property to the **GetImageViewController** class,
-`imageSourceType`, which makes the source type available.
-
-The other condition that must hold in order to save the image is that
-the `SaveCameraPhoto` setting should be YES. I added the method 
-
-    - (BOOL) shouldSaveToPhotoAlbum
-
-which synchronizes the app with the settings that are in the bundle and
-returns the value of `SaveCameraPhoto`.
 
 
 ## Supported Devices ##
@@ -47,28 +31,25 @@ popover controller.
 
 ## Fixes ##
 
-Between HW6 and this HW, I fixed an issue that caused the table view to
-display _very small_ renderings of the photos saved for a particular
-location. The photos are now rendered in a reasonable size. This fix
-also results in the table view displaying the date on which the photo
-was added.
+**Partial Fix** Although the app still displays only the address of a
+checkin location, I am now retrieving a lot more information about the
+location using reverse geocoding. The code that does that is located in:
+
+    File: MapViewController.m
+    Method: - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 
 
 ## Known Issues ##
-
-
-### New Issues ###
-
-The app crashed reproducibly when I tried to run it on the simulator
-with an iPad Retina configuration. Based on the error message, this
-device seems to require the use of a popover controller. I did not
-investigate this issue any further.
-
 
 ### Issues from Previous Releases ###
 
 The app continues to have the following issues which were in the
 original checkin app and have carried over to this version.
+
+- The app crashed reproducibly when I tried to run it on the simulator
+with an iPad Retina configuration. Based on the error message, this
+device seems to require the use of a popover controller. I did not
+investigate this issue any further.
 
 - The pins which identify locations on the map do not implement a custom
 button to checkin for that location, but instead use just the standard
@@ -80,11 +61,6 @@ much better to derive a place name and store that in the checkin list.
 
 - The app enables the user to save multiple instances of the same
 location.
-
-I have ideas about how to fix these things and since this code will be
-the foundation for the next two HW assignments, I might end up fixing
-some of them. But for this assignment, it is time to call it good and
-move on.
 
 
 *** END ***
