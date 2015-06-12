@@ -5,14 +5,13 @@ repository on GitHub:
 
 >  <https://github.com/carljparker/loc-uw-ios-hw8>
 
+This homework builds on the settings version of the checkin application
+by adding localization for the German language. 
+
 **Note** This readme covers only this homework, but this homework
 incorporates code and functionality from several previous homeworks. For
 information about the implementation and issues associated with those
 homeworks, please see the readme files that accompanied them.
-
-
-This homework builds on the settings version of the checkin application
-by adding localization for the German language. 
 
 
 ## Implementation Notes ##
