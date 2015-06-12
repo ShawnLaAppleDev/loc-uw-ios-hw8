@@ -102,8 +102,38 @@
 }
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control {
-    NSLog(@"%@", view.annotation.title);
     
+    NSLog(@"Title: %@", view.annotation.title);
+    
+    NSLog(@"MKAnnotation.coordinate(s): %f : %f", view.annotation.coordinate.latitude, view.annotation.coordinate.longitude);
+    
+    //
+    // Here is where I attempt to get more information about this location
+    // using (reverse)geocoding. I did get this working after all. The issue
+    // is that it takes time for the geocoding information to come back, so
+    // it doesn't appear in the log until after the app has already gone past
+    // the following lines. In other words, the completion blocks appears to
+    // complete asynchronously.
+    //
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:view.annotation.coordinate.latitude longitude:view.annotation.coordinate.longitude];
+    
+    NSLog(@"CLLocation: %@", location);
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    
+    [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray *placemarks, NSError *error) {
+        //
+        // I get no placemarks and no error output either
+        //
+        NSDictionary * locData = [placemarks firstObject];
+        NSLog( @"%@", locData );
+        NSLog( @"%@", error);
+    }];
+    
+    
+    //
+    // Go ahead and proceed with the rest of the code.
+    //
     CheckinInfo *checkinInfo = [[CheckinInfo alloc] initWithLocation:view.annotation.title];
     
     [self.delegate mapViewController:self didGetCheckinInfo:checkinInfo];
