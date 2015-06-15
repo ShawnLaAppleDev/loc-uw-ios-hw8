@@ -76,7 +76,7 @@
         }
     }
     
-    if ([annotation isKindOfClass:[MKPlacemark class]]) {
+    if ([annotation isKindOfClass:[MKPointAnnotation class]]) {
         MKPinAnnotationView *purplePin = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:@"PurplePin"];
         if (purplePin == nil) {
             purplePin = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"GreenPin" ];
@@ -169,14 +169,14 @@
     self.localSearch = [[MKLocalSearch alloc] initWithRequest:searchRequest];
     
     [self.localSearch startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error) {
-        for (id<MKAnnotation> annotation in self.mkMapView.annotations )  {
-            [self.mkMapView removeAnnotation:annotation];
-        }
         
-        for (MKMapItem *mapItem in response.mapItems) {
-            
-            [self.mkMapView addAnnotation:mapItem.placemark];
-            
+        [self.mkMapView removeAnnotations:self.mkMapView.annotations];
+        
+        for (MKMapItem *mapItem in response.mapItems){
+            MKPointAnnotation *annotation = [[MKPointAnnotation alloc]init];
+            annotation.coordinate = mapItem.placemark.coordinate;
+            annotation.title = mapItem.name;
+            [self.mkMapView addAnnotation:annotation];
         }
     }];
 }
